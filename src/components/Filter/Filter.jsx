@@ -1,7 +1,8 @@
 // import PropTypes from 'prop-types';
 import css from 'components/Filter/Filter.module.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { filterChange, getFilter } from '../../Redux/ToolkitSlice'
+import { filterChange } from '../../Redux/contacts/slice'
+import { getFilter } from '../../Redux/contacts/selectors'
 
  
   

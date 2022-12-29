@@ -1,16 +1,15 @@
 import PropTypes from "prop-types";
 import css from 'components/Contacts/Contacts.module.css'
-import { getContacts, getFilter } from '../../Redux/ToolkitSlice'
+import { getContacts, getFilter } from '../../Redux/contacts/selectors'
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from '../../Redux/operations'
+import { deleteContact } from '../../Redux/contacts/operations'
 
 export const ContactList = () => {
  const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
-  console.log(contacts);
+ 
   const filter = useSelector(getFilter);
-console.log(filter);
-  
+
   
         const normalizedFilter = filter.toLowerCase();
     const visibleContacts = contacts.filter((contact) =>
