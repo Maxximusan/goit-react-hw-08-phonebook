@@ -11,10 +11,12 @@
 // import css from 'components/App.module.css'
 
 
-import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout.jsx';
-
+import { useDispatch } from 'react-redux'
+import { refreshUser } from 'Redux/auth/operations.js';
+import { useAuth } from './hooks/useAuth.js';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -32,11 +34,16 @@ export const App = () => {
   // useEffect(() => {
   //   dispatch(fetchContacts())
   // },[dispatch])
-    
-   
-  return (
-      
-
+  
+    const dispatch = useDispatch()
+   const { isRefreshing } = useAuth()
+  
+  useEffect(() => {
+    dispatch(refreshUser())
+  }, [dispatch])
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
      <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
