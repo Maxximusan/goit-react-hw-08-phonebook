@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import { register, logIn, logOut, refreshUser } from './operations';
-
+import { logIn, logOut, register } from './operations';
+// , logIn, logOut, refreshUser
 const initialState = {
   user: { name: null, email: null },
   token: null,
@@ -11,12 +11,31 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  //   extraReducers: {
-  //     [register.fulfilled](state, action) {
-  //       state.user = action.payload.user;
-  //       state.token = action.payload.token;
-  //       state.isLoggedIn = true;
-  //     },
+  extraReducers: builder =>
+    builder
+      .addCase(register.pending, (state, action) => state)
+      .addCase(register.fulfilled, (state, action) => {
+        state.user = action.payload.user;
+        state.token = action.payload.token;
+        state.isLoggedIn = true;
+      })
+      .addCase(register.rejected, (state, action) => state)
+      .addCase(logIn.fulfilled, (state, action) => {
+        state.user = action.payload.user;
+        state.token = action.payload.token;
+        state.isLoggedIn = true;
+      })
+      .addCase(logOut.fulfilled, (state, action) => {
+        state.user = { name: null, email: null };
+        state.token = null;
+        state.isLoggedIn = false;
+      }),
+  // extraReducers: {
+  // [register.fulfilled](state, action) {
+  //   state.user = action.payload.user;
+  //   state.token = action.payload.token;
+  //   state.isLoggedIn = true;
+  // },
   //     [logIn.fulfilled](state, action) {
   //       state.user = action.payload.user;
   //       state.token = action.payload.token;
