@@ -17,6 +17,8 @@ import { Layout } from './Layout.jsx';
 import { useDispatch } from 'react-redux'
 import { refreshUser } from 'Redux/auth/operations.js';
 import { useAuth } from './hooks/useAuth.js';
+import { RestrictedRoute } from './RestrictedRoute';
+import { PrivateRoute } from './PrivateRoute'
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -47,9 +49,21 @@ export const App = () => {
      <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/usercontacts"  element={<UserContactsPage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute component={<RegisterPage />} redirectTo="/usercontacts" />
+            } />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute component={<LoginPage />} redirectTo="/usercontacts" />
+            } />
+          <Route
+            path="/usercontacts"
+            element={
+              <PrivateRoute component={<UserContactsPage />} redirectTo="/login" />
+            } />
       </Route>
     </Routes>
       // <div className={css.container}>
