@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { logIn, logOut, refreshUser, register } from './operations';
-// , logIn, logOut, refreshUser
+
 const initialState = {
   user: { name: null, email: null },
   token: null,
@@ -41,6 +41,8 @@ const authSlice = createSlice({
       .addCase(refreshUser.rejected, (state, action) => {
         state.isRefreshing = false;
       }),
+
+  // 2й вариант
   // extraReducers: {
   // [register.fulfilled](state, action) {
   //   state.user = action.payload.user;
