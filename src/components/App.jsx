@@ -16,7 +16,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout.jsx';
 import { useDispatch } from 'react-redux'
 import { refreshUser } from 'Redux/auth/operations.js';
-import { useAuth } from './hooks/useAuth.js';
+import { useAuth } from 'hooks';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute'
 
