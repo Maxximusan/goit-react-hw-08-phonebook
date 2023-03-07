@@ -13,7 +13,8 @@ const styles = {
     fontWeight: 500,
     fontSize: 48,
     textAlign: 'center',
-    paddingTop: '50px',
+    paddingTop: '85px',
+    color: 'rgb(253, 236, 82)',
   },
 };
 
