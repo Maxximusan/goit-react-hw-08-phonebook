@@ -1,91 +1,38 @@
-**Read in other languages: [Русский](README.md), [Polska](README.pl.md),
-[English](README.en.md), [Spanish](README.es.md).**
+**Read in other languages: [English](README.md), 
+[Русский](README.ru.md).**
 
-# React homework template
+<a id='suda'></a>
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+# Phonebook
 
-## Подготовка нового проекта
+Always keep handly the important phone numbers.
+![screen test HOME](./src/images/pho1.png)
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Клонируй этот репозиторий.
-3. Измени имя папки с `react-homework-template` на имя своего проекта.
-4. Создай новый пустой репозиторий на GitHub.
-5. Открой проект в VSCode, запусти терминал и свяжи проект с GitHub-репозиторием
-   [по инструкции](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url).
-6. Установи базовые зависимости проекта командой `npm install`.
-7. Запусти режим разработки, выполнив команду `npm start`.
-8. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+___
+## Description
 
-## Деплой
+_You need register or login - for into contact page, where you can add contact names and phone numbers after that you can see them._ 
+![screen test Contacts](./src/images/pho2.png)
+___
+### Technologyes that i used in this project:
+ ![React Badge](https://img.shields.io/badge/react-%2300CED1?style=for-the-badge&logo=react&logoColor=%2300CED1&labelColor=%23E0FFFF) ![Node Badge](https://img.shields.io/badge/node-%23228B22?style=for-the-badge&logo=nodedotjs&logoColor=006400&labelColor=%2390EE90) ![Static Badge](https://img.shields.io/badge/javascript-%23FFD700?style=for-the-badge&logo=javascript&logoColor=%23FF8C00&labelColor=%23fff255) ![HTML5 Badge](https://img.shields.io/badge/html5-%23E34F26?style=for-the-badge&logo=html5&logoColor=E34F26&labelColor=%23FFDAB9) ![Static Badge](https://img.shields.io/badge/css3-%231572B6?style=for-the-badge&logo=css3&logoColor=1572B6&labelColor=%23E0FFFF) ![Axios Badge](https://img.shields.io/badge/axios-%239400D3?style=for-the-badge&logo=axios&logoColor=9400D3&labelColor=%23DDA0DD) ![Mui Badge](https://img.shields.io/badge/mui-%23007FFF?style=for-the-badge&logo=mui&logoColor=%23007FFF&labelColor=%2387CEEB)
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
+
+```
+and more:
+
+- react-router-dom
+- react-icons
+- react-loader-spinner
+
 ```
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+### `Getting Started`
 
-![GitHub Pages settings](./assets/repo-settings.png)
+- clone the repository
+- install all dependencies
+- and start )
 
-### Статус деплоя
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
-
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
-
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
-
-![Deployment status](./assets/status.png)
-
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
-
-### Маршрутизация
-
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеши в начале и конце строки
-обязательны.
-
-```jsx
-<BrowserRouter basename="/your_repo_name/">
-  <App />
-</BrowserRouter>
-```
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+[back to the begining](#suda)
