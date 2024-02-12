@@ -1,5 +1,6 @@
-import { Formik, Form, Field } from 'formik';
+import CssBaseline from '@mui/material/CssBaseline';
 
+import { Formik, Form, Field } from 'formik';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'Redux/auth/operations';
 import css from './LoginForm.module.css';
@@ -28,6 +29,7 @@ export const LoginForm = () => {
 
   return (
     <div className={css.mainContainer}>
+       <CssBaseline />
       <div className={css.titleContainer}>
         <h2 className={css.title}>Login to PHONEBOOK</h2>
       </div>
