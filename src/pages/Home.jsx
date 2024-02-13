@@ -20,11 +20,11 @@ const styles = {
 
 export default function Home() {
   return (
-    <div style={styles.container}>
+    <section style={styles.container}>
       <h1 style={styles.title}>
         Welcome to your Phonebook{' '}
         
       </h1>
-    </div>
+    </section>
   );
 }

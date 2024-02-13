@@ -3,11 +3,11 @@ import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 
 export default function Register() {
   return (
-    <div>
+    <section>
       
         <title>Registration</title>
       
       <RegisterForm />
-    </div>
+    </section>
   );
 }

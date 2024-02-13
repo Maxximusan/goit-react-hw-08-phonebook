@@ -26,3 +26,16 @@ export const validationSchemaLogin = yup.object().shape({
 //       regExp.password,
 //       'Must Contain 8 Characters, One Uppercase, One Lowercase, One Number'
 //     ),
+
+
+
+// const regExp = {
+
+   // name: ^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$,
+   // email: /^[ A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\s*?$/i,
+   // password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/,
+// };
+
+// export default regExp;
+
+
