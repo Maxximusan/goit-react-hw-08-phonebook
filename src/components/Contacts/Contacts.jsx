@@ -1,8 +1,14 @@
 import PropTypes from "prop-types";
-import css from 'components/Contacts/Contacts.module.css'
+import Button from '@mui/material/Button';
+
+// import css from 'components/Contacts/Contacts.module.css'
 import { getContacts, getFilter } from '../../Redux/contacts/selectors'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from '../../Redux/contacts/operations'
+import * as SC from 'components/Contacts/Contacts.styled'
+
+
+
 
 export const ContactList = () => {
  const dispatch = useDispatch();
@@ -16,23 +22,25 @@ export const ContactList = () => {
       contact.name.toLowerCase().includes(normalizedFilter));
   
 
+
  
+
   return (
-    <ol className={css.list}>
+    <SC.List >
       {visibleContacts.map(({ id, name, number }) => (
-        <li key={id} className={css.item}>
-          <div className={css.item__container}>
+        <SC.Item key={id} >
+          <SC.ItemContainer >
             <p>
-            <span className={css.item__name}>{name}: </span>
-              <span className={css.item__number}>{number}</span>
+            <SC.ItemName >{name}: </SC.ItemName>
+              <SC.ItemNumber >{number}</SC.ItemNumber>
               </p>
-          <button className={css.item__btn}type="button" onClick={() => dispatch(deleteContact(id))}>
+          <Button  type="submit" color="error" variant="outlined" size="small" onClick={() => dispatch(deleteContact(id))}>
             Delete
-            </button>
-            </div>
-        </li>
+            </Button>
+            </SC.ItemContainer>
+        </SC.Item>
       ))}
-    </ol>
+    </SC.List>
   );
 };
 
@@ -46,5 +54,5 @@ ContactList.propTypes = {
       number: PropTypes.string.isRequired,
     }).isRequired
   ),
-  // onDeleteContact: PropTypes.func.isRequired,
+  
 };

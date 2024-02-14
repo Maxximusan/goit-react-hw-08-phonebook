@@ -1,5 +1,7 @@
 import {useState} from 'react'
 import { nanoid } from 'nanoid';
+import Button from '@mui/material/Button';
+
 import css from 'components/Form/Form.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../Redux/contacts/selectors'
@@ -98,7 +100,7 @@ export const Form = () => {
             />
           </label>
 
-          <button className={css.form__btn} type="submit">Add contact!</button>
+          <Button  type="submit" color="success" variant="outlined" size="small">Add contact!</Button>
         </form>
         )
    
