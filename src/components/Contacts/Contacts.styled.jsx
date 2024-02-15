@@ -11,6 +11,7 @@ export const Item = styled.li`
 export const ItemContainer = styled.div`
      display: flex;
   justify-content: space-between;
+  align-items: center
 `
 
 export const ItemName = styled.span`

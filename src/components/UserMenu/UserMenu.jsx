@@ -1,4 +1,5 @@
 import { Box, Button } from '@mui/material';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
 import { useDispatch } from 'react-redux';
 import { logOut } from 'Redux/auth/operations';
@@ -22,7 +23,7 @@ export const UserMenu = () => {
           }}>
             Welcome, {user.name}
           </Box>
-         <Button type="submit" color="secondary" variant="outlined" size="small" onClick={() => dispatch(logOut())}>
+         <Button type="submit" color="secondary" variant="outlined" size="small" endIcon={<LogoutOutlinedIcon />} onClick={() => dispatch(logOut())}>
         Logout
       </Button>
     </Box>
