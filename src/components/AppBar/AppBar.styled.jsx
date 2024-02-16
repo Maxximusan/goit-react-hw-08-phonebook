@@ -1,10 +1,12 @@
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
+import { styled } from '@mui/material/styles';
 
-export const Header = styled.header`
+export const Header = styled('header')(({ theme }) => ({
 
-display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #2a363b;
-`
+display: 'flex',
+justifyContent: 'space-between',
+  alignItems: 'center',
+  marginBottom: theme.spacing(5),
+  borderBottom: theme.customBorders.primary,
+}))
+

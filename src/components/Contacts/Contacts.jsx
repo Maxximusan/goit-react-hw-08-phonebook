@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Box } from '@mui/material';
 
 // import css from 'components/Contacts/Contacts.module.css'
 import { getContacts, getFilter } from '../../Redux/contacts/selectors'
@@ -30,15 +31,19 @@ export const ContactList = () => {
     <SC.List >
       {visibleContacts.map(({ id, name, number }) => (
         <SC.Item key={id} >
-          <SC.ItemContainer >
+          <Box sx={{
+            display: 'flex',
+           justifyContent: 'space-between',
+           alignItems: 'center'
+                   }}>
             <p>
-            <SC.ItemName >{name}: </SC.ItemName>
+              <SC.ItemName >{name}: </SC.ItemName>
               <SC.ItemNumber >{number}</SC.ItemNumber>
-              </p>
-          <Button  type="submit" color="error" variant="outlined" size="small" startIcon={<DeleteIcon />} onClick={() => dispatch(deleteContact(id))}>
+            </p>
+            <Button  type="submit" color="error" variant="outlined" size="small" startIcon={<DeleteIcon />} onClick={() => dispatch(deleteContact(id))}>
             Delete
             </Button>
-            </SC.ItemContainer>
+         </Box>
         </SC.Item>
       ))}
     </SC.List>

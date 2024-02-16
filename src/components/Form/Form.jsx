@@ -8,9 +8,9 @@ import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../Redux/contacts/selectors'
 import { addContact } from '../../Redux/contacts/operations'
-import { Form, Field, Input, Baton} from 'components/Form/Form.styled'
+import { Formm, Field, Input, Baton} from 'components/Form/Form.styled'
 
-export const AddContacts = () => {
+export const Form = () => {
   
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts)
@@ -72,7 +72,7 @@ export const AddContacts = () => {
  
   
         return (
-            <Form onSubmit={formSubmit} >
+            <Formm onSubmit={formSubmit} >
           <Field htmlFor={nameInputId} >
             Name:
              <Input
@@ -104,8 +104,8 @@ export const AddContacts = () => {
           </Field>
 
           {/* <Button  type="submit" color='success' variant="contained" size="small" >Add contact!</Button> */}
-          <Baton>Add contact</Baton>
-        </Form>
+          <Baton type="submit">Add contact</Baton>
+        </Formm>
         )
    
 }

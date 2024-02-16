@@ -1,36 +1,45 @@
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
+import { styled } from '@mui/material/styles';
 
-export const List = styled.ol`
-    padding-left: 30px;
-`
 
-export const Item = styled.li`
-     padding: 4px;
-`
+export const List = styled('ol')(({ theme }) => ({
 
-export const ItemContainer = styled.div`
-     display: flex;
-  justify-content: space-between;
-  align-items: center
-`
+    paddingLeft: theme.spacing(8),
+  }))
+ 
 
-export const ItemName = styled.span`
-    color: rgb(27, 27, 87);
-  font-family: 'Fira sans', sans-serif;
-`
+export const Item = styled('li')(({ theme }) => ({
 
-export const ItemNumber = styled.span`
-   color: rgb(90, 42, 221);
-  font-family: 'Menlo, monospace';
-`
+  padding: theme.spacing(1),
+}))
 
-export const ItemButton = styled.button`
-   border-radius: 1em;
-  border-color: tomato;
-  &:hover,
-  &:focus {
-    background: rgb(255, 59, 59);
+
+
+
+export const ItemName = styled('span')(({ theme }) => ({
+
+  color: theme.customColors.contactName,
+  fontFamily: theme.customFontFamily.contactName,
+
+}))
+   
+
+
+export const ItemNumber = styled('span')(({ theme }) => ({
+
+  color: theme.customColors.contactNumber,
+  fontFamily: theme.customFontFamily.contactNumber,
   
-  border-color: rgba(255, 59, 59, 0.884);
-  }
-`
+
+  
+}))
+
+
+// '&:hover': {
+//   backgroundColor: theme.customColors.deleteBtn,
+  
+// },
+// '&:focus': {
+      
+//   backgroundColor: theme.customColors.deleteBtnAlt,
+// },

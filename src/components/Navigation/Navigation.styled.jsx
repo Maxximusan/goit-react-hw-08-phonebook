@@ -1,18 +1,34 @@
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 import { NavLink } from 'react-router-dom';
+import { styled } from '@mui/material/styles';
 
-export const Link = styled(NavLink)`
-display: inline-block;
-  text-decoration: none;
-  padding: 12px;
-  font-weight: 700;
-  color: #2a363b;
 
-  &.active {
-    color: #e84a5f;
-  }
+
+export const Link = styled(NavLink)(({ theme }) => ({
+
+    display: 'inline-block',
+    textDecoration: 'none',
+    padding: theme.spacing(3),
+    fontWeight: theme.customFontWeight.bold,
+    color: theme.customColors.navigationLink,
   
-  &:hover {
-    text-decoration: underline;
-  }
-`
+
+    
+    '&.active': {
+      color: theme.customColors.nlActive
+    },
+    
+      '&:hover': {
+        textDecoration: 'underline'
+      },
+
+      '&:focus': {
+        
+        backgroundColor: theme.customColors.nlFocus,
+      },
+      
+    }))
+
+  
+
+ 

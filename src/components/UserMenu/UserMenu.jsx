@@ -15,7 +15,7 @@ export const UserMenu = () => {
       sx={{
       display: 'flex',
       alignItems: 'center',
-      gap: 1.5
+      gap: 2,
     }}>
           <Box as='p' 
             sx={{

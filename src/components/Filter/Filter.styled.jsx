@@ -1,15 +1,26 @@
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
+import { styled } from '@mui/material/styles';
 
-export const Field = styled.label`
-    display: flex;
-  flex-direction: column;
-  padding: 10px;
-  /* width: 300px; */
-`
 
-export const Input = styled.input`
-  width: 350px;
-  border-radius: 4px;
-  border-color: rgba(0, 0, 0, 0);
-  outline: none;
-`
+
+export const Field = styled('label')(({ theme }) => ({
+
+    display: 'flex',
+    flexDirection: 'column',
+    padding: theme.spacing(2),
+    }))
+   
+
+
+export const Input = styled('input')(({ theme }) => ({
+
+      width: '350px',
+      borderRadius: theme.customBorderRadius.standart,
+      borderColor: 'rgb(0 0 0 / 0%)', 
+      outline: 'none',
+      backgroundColor: theme.customColors.addContactsBackgroundAlt,
+    }))
+  
+  
+    // border-color: rgba(0, 0, 0, 0);
+  
