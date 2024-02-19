@@ -11,6 +11,9 @@ export const List = styled('ol')(({ theme }) => ({
 export const Item = styled('li')(({ theme }) => ({
 
   padding: theme.spacing(1),
+  [theme.breakpoints.down(theme.breakpoints.values.tablet)]: {
+    fontSize: theme.spacing(3)
+}
 }))
 
 
@@ -43,3 +46,14 @@ export const ItemNumber = styled('span')(({ theme }) => ({
       
 //   backgroundColor: theme.customColors.deleteBtnAlt,
 // },
+export const  BtnContainer = styled('div')(({ theme }) => ({
+  [theme.breakpoints.down(theme.breakpoints.values.tablet)]: {
+      display: 'none',
+  }
+}))
+
+export const  IconBtnContainer = styled('div')(({ theme }) => ({
+  [theme.breakpoints.up(theme.breakpoints.values.tablet)]: {
+      display: 'none',
+  }
+}))

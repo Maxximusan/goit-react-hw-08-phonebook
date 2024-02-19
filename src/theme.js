@@ -11,6 +11,20 @@ export const theme = createTheme({
         }
     },
     
+    breakpoints: {
+        values: {
+          zero: 0,
+          mobileResponsive: 320,
+          mobileAdaptive: 480,
+          my1: 580,
+          my2: 680,
+          tablet: 768,
+          my3: 820,
+          my4: 930,
+          desktop: 1280,
+        },
+      },
+
    spacing: [0, 4, 10, 12, 15, 16, 20, 26, 30, 48, 85],
   
 

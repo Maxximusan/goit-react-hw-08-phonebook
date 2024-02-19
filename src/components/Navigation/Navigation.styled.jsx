@@ -9,9 +9,9 @@ export const Link = styled(NavLink)(({ theme }) => ({
     display: 'inline-block',
     textDecoration: 'none',
     padding: theme.spacing(3),
-    fontWeight: theme.customFontWeight.bold,
+    fontWeight: theme.customFontWeight.medium,
     color: theme.customColors.navigationLink,
-  
+    fontSize: theme.spacing(3),
 
     
     '&.active': {
@@ -22,11 +22,14 @@ export const Link = styled(NavLink)(({ theme }) => ({
         textDecoration: 'underline'
       },
 
-      '&:focus': {
-        
-        backgroundColor: theme.customColors.nlFocus,
-      },
-      
+      // '&:focus': {
+      //    backgroundColor: theme.customColors.nlFocus,
+      // },
+     
+    [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
+      fontWeight: theme.customFontWeight.bold,
+      fontSize: theme.spacing(5),
+  }
     }))
 
   
