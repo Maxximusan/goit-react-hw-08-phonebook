@@ -1,19 +1,25 @@
 import { styled } from '@mui/material/styles';
 import img from '../images/old-book.jpg'
+import imgForMobile from 'images/table_for_menu.jpg'
 
 
 export const SectionsContainer = styled('div')(({ theme }) => ({
 
-    display: 'flex',
-    justifyContent: 'center',
+    // display: 'flex',
+    // justifyContent: 'center',
     
     backgroundColor: theme.customColors.backgroundAlt,
-    backgroundImage: `url(${img})`,
+    backgroundImage: `url(${imgForMobile})`,
     // backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     // minHeight: '600px',
     backgroundSize: '100% 100%',
 
+    [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
+        display: 'flex',
+        justifyContent: 'center',
+        backgroundImage: `url(${img})`,
+    },
 
     
   }))
@@ -21,7 +27,7 @@ export const SectionsContainer = styled('div')(({ theme }) => ({
 
   export const AddList = styled('section')(({ theme }) => ({
 
-    padding: theme.spacing(6),
+    padding: theme.spacing(9,6,2,6),
     // width: '550px'
     // maxWidth: '450px',
 
@@ -51,7 +57,7 @@ export const SectionsContainer = styled('div')(({ theme }) => ({
  
   export const ContactsList = styled('section')(({ theme }) => ({
 
-    padding: theme.spacing(6),
+    padding: theme.spacing(2,6,10,6),
     // width: '550px'
     // maxWidth: '450px',
 
@@ -83,8 +89,12 @@ export const SectionsContainer = styled('div')(({ theme }) => ({
   
   export const Title = styled('h2')(({ theme }) => ({
 
-    padding: theme.spacing(4),
-    textAlign: 'center'
+    padding: theme.spacing(2),
+    textAlign: 'center',
+
+    [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
+        padding: theme.spacing(4),
+    },
   
   }))
   

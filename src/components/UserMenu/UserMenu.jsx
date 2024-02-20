@@ -30,7 +30,7 @@ export const UserMenu = () => {
 
       <IconBtnContainer>
         <IconButton aria-label="logout" size="small" color="secondary" type="submit" onClick={() => dispatch(logOut())}>
-          <LogoutOutlinedIcon  fontSize="small"/>
+          <LogoutOutlinedIcon  sx={{ fontSize: 15 }}/>
         </IconButton>
       </IconBtnContainer>
     </Box>

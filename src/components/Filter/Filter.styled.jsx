@@ -8,6 +8,12 @@ export const Field = styled('label')(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
     padding: theme.spacing(2),
+    fontSize: theme.spacing(3),
+    textAlign: 'center',
+    [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
+      
+      fontSize: theme.spacing(5),
+    },
     }))
    
 
@@ -23,13 +29,13 @@ export const Input = styled('input')(({ theme }) => ({
 
       [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
         width: '180px',
-    },
+      },
     [theme.breakpoints.up(theme.breakpoints.values.my1)]: {
       width: '220px',
-  },
+     },
     [theme.breakpoints.up(theme.breakpoints.values.my2)]: {
       width: '250px',
-  },
+     },
     [theme.breakpoints.up(theme.breakpoints.values.tablet)]: {
       width: '280px',
     },

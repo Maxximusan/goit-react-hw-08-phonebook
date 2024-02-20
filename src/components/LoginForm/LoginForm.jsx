@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 
-import {InputAdornment, IconButton, InputLabel, OutlinedInput, FormHelperText} from '@mui/material';
+import {InputAdornment, IconButton, InputLabel, OutlinedInput, FormHelperText,  Alert,} from '@mui/material';
 import {Visibility, VisibilityOff}from '@mui/icons-material';
 import Button from '@mui/material/Button';
 
@@ -18,6 +18,8 @@ import {MainContainer , TittleContainer , Title, Formm, Input, InputFormControl,
 
 
 export const LoginForm = () => {
+  const [showPassword, setShowPassword] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState(null);
   const dispatch = useDispatch();
 
   const formik = useFormik({
@@ -38,6 +40,9 @@ export const LoginForm = () => {
         formik.resetForm();
       }
       
+      else if (res.type === 'auth/login/rejected'){
+        setErrorMessage('We have not found user for this email/password')
+      }
       // formik.resetForm();
       
     },
@@ -45,7 +50,7 @@ export const LoginForm = () => {
   });
 
 
-  const [showPassword, setShowPassword] = React.useState(false);
+  
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -59,6 +64,10 @@ export const LoginForm = () => {
      
       <TittleContainer>
         <Title>Login to PHONEBOOK</Title>
+        {errorMessage && 
+          <Alert variant="outlined" severity="error">
+            {errorMessage}
+            </Alert>}
       </TittleContainer>
 
       

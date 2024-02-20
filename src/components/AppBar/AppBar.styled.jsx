@@ -8,5 +8,7 @@ justifyContent: 'space-between',
   alignItems: 'center',
   marginBottom: theme.spacing(5),
   borderBottom: theme.customBorders.primary,
+
+  
 }))
 

@@ -8,7 +8,7 @@ export const MainContainer = styled(Paper)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
       alignItems: 'center',
-      width: '500px',
+      maxWidth: '500px',
 
       margin: theme.spacing(0, 'auto'),
       padding: theme.spacing(8, 0),
@@ -32,7 +32,7 @@ export const Title = styled('h2')(({ theme }) => ({
 
   export const Formm = styled('form')(({ theme }) => ({
    
-    width: '320px'
+    maxWidth: '320px'
   }))
      
  

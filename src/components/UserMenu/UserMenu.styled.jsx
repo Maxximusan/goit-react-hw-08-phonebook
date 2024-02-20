@@ -3,9 +3,10 @@ import { styled } from '@mui/material/styles';
 export const Greeting = styled('h4')(({ theme }) => ({
    
     fontWeight: theme.customFontWeight.medium,
+    fontSize: theme.spacing(2),
 
     [theme.breakpoints.up(theme.breakpoints.values.mobileResponsive)]: {
-        fontWeight: theme.customFontWeight.medium,
+        
         fontSize: theme.spacing(3),
     },
 

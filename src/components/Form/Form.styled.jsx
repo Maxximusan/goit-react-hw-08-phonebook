@@ -15,7 +15,13 @@ export const Field = styled('label')(({ theme }) => ({
      
   display: 'flex',
   flexDirection: 'column',
-  marginBottom: theme.spacing(6),
+  marginBottom: theme.spacing(2),
+  fontSize: theme.spacing(3),
+
+  [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
+    marginBottom: theme.spacing(6),
+    fontSize: theme.spacing(5),
+    },
 
 }))
 
@@ -27,7 +33,7 @@ export const Input = styled('input')(({ theme }) => ({
   outline: 'none',
   backgroundColor: theme.customColors.addContactsBackgroundAlt,
 
-  [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
+[theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
     width: '180px',
 },
 [theme.breakpoints.up(theme.breakpoints.values.my1)]: {

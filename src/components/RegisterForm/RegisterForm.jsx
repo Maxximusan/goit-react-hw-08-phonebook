@@ -71,7 +71,7 @@ export const RegisterForm = () => {
               id="username"
               // variant="standard" 
           label="username"
-              
+         
               value={formik.values.username}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -88,7 +88,7 @@ export const RegisterForm = () => {
               id="email"
          
           label="email"
-             
+          
               value={formik.values.email}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}

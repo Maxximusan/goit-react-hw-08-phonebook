@@ -4,7 +4,14 @@ import { styled } from '@mui/material/styles';
 
 export const List = styled('ol')(({ theme }) => ({
 
-    paddingLeft: theme.spacing(8),
+    paddingLeft: theme.spacing(2),
+
+    [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
+      paddingLeft: theme.spacing(4),
+    },
+    [theme.breakpoints.up(theme.breakpoints.values.my1)]: {
+      paddingLeft: theme.spacing(8),
+    },
   }))
  
 

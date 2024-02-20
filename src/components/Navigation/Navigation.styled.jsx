@@ -8,10 +8,10 @@ export const Link = styled(NavLink)(({ theme }) => ({
 
     display: 'inline-block',
     textDecoration: 'none',
-    padding: theme.spacing(3),
+    padding: theme.spacing(2, 1),
     fontWeight: theme.customFontWeight.medium,
     color: theme.customColors.navigationLink,
-    fontSize: theme.spacing(3),
+    fontSize: theme.spacing(2),
 
     
     '&.active': {
@@ -25,7 +25,11 @@ export const Link = styled(NavLink)(({ theme }) => ({
       // '&:focus': {
       //    backgroundColor: theme.customColors.nlFocus,
       // },
-     
+      [theme.breakpoints.up(theme.breakpoints.values.mobileResponsive)]: {
+        padding: theme.spacing(3),
+        fontSize: theme.spacing(3),
+        },
+
     [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
       fontWeight: theme.customFontWeight.bold,
       fontSize: theme.spacing(5),
