@@ -8,6 +8,10 @@ export const Container = styled('section')(({ theme }) => ({
     justifyContent: 'center',
     backgroundImage: `url(${img})`,
     backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    // backgroundSize: '100% 100%',
+    backgroundPosition: '50% 50%',
+   
   
   }))
 

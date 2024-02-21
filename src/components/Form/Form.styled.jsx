@@ -68,6 +68,15 @@ export const Baton = styled(Button)(({ theme }) => ({
     backgroundColor: theme.customColors.addBtnHover,
   },
 
+  [theme.breakpoints.down(theme.breakpoints.values.mobileAdaptive)]: {
+    display: 'none',
+}
+
 }))
 
 
+export const  IconBtnContainer = styled('div')(({ theme }) => ({
+    [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {
+        display: 'none',
+    }
+  }))

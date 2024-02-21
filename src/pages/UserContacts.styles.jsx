@@ -12,7 +12,7 @@ export const SectionsContainer = styled('div')(({ theme }) => ({
     backgroundImage: `url(${imgForMobile})`,
     // backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    // minHeight: '600px',
+    minHeight: '600px',
     backgroundSize: '100% 100%',
 
     [theme.breakpoints.up(theme.breakpoints.values.mobileAdaptive)]: {

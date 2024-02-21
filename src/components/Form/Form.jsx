@@ -1,14 +1,15 @@
 import {useState} from 'react'
 import { nanoid } from 'nanoid';
 // import Button from '@mui/material/Button';
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 
-
+import IconButton from '@mui/material/IconButton';
 
 // import css from 'components/Form/Form.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../Redux/contacts/selectors'
 import { addContact } from '../../Redux/contacts/operations'
-import { Formm, Field, Input, Baton} from 'components/Form/Form.styled'
+import { Formm, Field, Input, Baton, IconBtnContainer} from 'components/Form/Form.styled'
 
 export const Form = () => {
   
@@ -105,6 +106,11 @@ export const Form = () => {
 
           {/* <Button  type="submit" color='success' variant="contained" size="small" >Add contact!</Button> */}
           <Baton type="submit">Add contact</Baton>
+          <IconBtnContainer >
+            <IconButton type="submit" aria-label="add contact" color="success"  size="medium">
+                <AddIcCallIcon fontSize="large"/>
+            </IconButton>
+          </IconBtnContainer>
         </Formm>
         )
    
