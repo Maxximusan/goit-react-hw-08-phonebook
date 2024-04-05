@@ -15,8 +15,9 @@ _You need register or login - for into contact page, where you can add contact n
 ![screen test Contacts](./src/images/pho3.png)
 
 
-_or mobile version_
-![screen test Contacts](./src/images/pho4.png)
+_Or mobile version._
+
+![screen test Contacts-mob](./src/images/pho4.png)
 
 ___
 ### Technologyes that i used in this project:
