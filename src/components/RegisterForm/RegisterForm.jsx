@@ -31,8 +31,8 @@ export const RegisterForm = () => {
         email: values.email,
         password: values.password,
       }))
-      console.log(res);
-      console.log(values);
+      // console.log(res);
+      // console.log(values);
 
       if (res.type === 'auth/register/fulfilled') {
         formik.resetForm();
